@@ -66,7 +66,10 @@ var settings = module.exports = {
     // Serve up the welcome page
     httpStatic: path.join(__dirname,"public"),
 
-    functionGlobalContext: { },
+    functionGlobalContext: {
+	    yahooFinance:require('yahoo-finance'),
+	    yfinance:require('yahoo-finance2').default
+    },
 
     // Configure the logging output
     logging: {
